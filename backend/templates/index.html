@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CloudOps Monitoring Dashboard</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>
+            🚀 CloudOps Monitoring Dashboard
+        </h1>
+
+        <p>
+            Real-Time Infrastructure Monitoring
+        </p>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+
+            <h2>CPU</h2>
+
+            <p id="cpu">0%</p>
+
+            <div class="progress">
+                <div id="cpuBar"></div>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>RAM</h2>
+
+            <p id="ram">0%</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Disk</h2>
+
+            <p id="disk">0%</p>
+
+        </div>
+
+    </div>
+
+    <div class="chart-card">
+
+        <h2>CPU Usage Trend</h2>
+
+        <canvas id="cpuChart"></canvas>
+
+    </div>
+
+    <div class="info-card">
+
+        <h2>System Information</h2>
+
+        <p id="hostname"></p>
+
+        <p id="os"></p>
+
+        <p id="uptime"></p>
+
+    </div>
+
+    <div class="containers-card">
+
+        <h2>Running Containers</h2>
+
+        <ul id="containers"></ul>
+
+    </div>
+
+    <div class="process-card">
+
+        <h2>Top Processes</h2>
+
+        <ul id="processes"></ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
