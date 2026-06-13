@@ -26,8 +26,8 @@ jobs:
             - name: Log in to Docker Hub
               uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
               with:
-                    username: ${{ secrets.DOCKER_USERNAME }}
-                    password: ${{ secrets.DOCKER_PASSWORD }}
+                    username: ${{ secrets.DOCKERHUB_USERNAME }}
+                    password: ${{ secrets.DOCKERHUB_PASSWORD }}
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
             - name: Build and push Docker image
@@ -36,4 +36,4 @@ jobs:
                 context: ./backend
                 file: ./backend/Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_USERNAME }}/cloudops-backend:v2
+                tags: ${{ secrets.DOCKERHUB_USERNAME }}/cloudops-backend:v2
