@@ -1,7 +1,7 @@
 name: my system monitor ci cd
 on:
     push:
-        branches: [ "main" ]
+        branches: [ "keyur" ]
 
 jobs:
     run-tests-job:
